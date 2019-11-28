@@ -14,10 +14,10 @@ let bodyParser = require("body-parser");
 
 
 
-// const middleware = (req, res, next) => {
-//   req.time = new Date().toString();
-//   next();
-// };
+const middleware = (req, res, next) => {
+  req.time = new Date().toString();
+  next();
+};
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -96,6 +96,12 @@ app.post("/", (req, res) => {
 });
 
 /** 12) Get data form POST  */
+app.post("/name", (req, res) => {
+  let first = req.body.first;
+    let last = req.body.last;
+
+  res.send({name: first+" "+last});
+});
 
 // This would be part of the basic setup of an Express app
 // but to allow FCC to run tests, the server is already active
