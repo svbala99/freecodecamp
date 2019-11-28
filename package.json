@@ -4,6 +4,7 @@
   "description": "This includes boiler plate from freecodecamp on which I'm submitting the challenges.",
   "keywords": [ "npm", "APIs", "glitch","freecodecamp"],
   "license": "MIT",
+  "version": "1.0.1",
 	"dependencies": {
 		"express": "^4.14.0"
 	},
