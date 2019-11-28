@@ -23,16 +23,18 @@ var app = express();
 // });
 
 /** 4) Serve static assets  */
-app.use(express.static()); 
+// app.use(express.static(__dirname + "/public")); 
 
-app.get("/", (req, res) => {
-  let absolutePath = __dirname + "/views/index.html"; 
-    res.sendFile(absolutePath); 
-});
+// app.get("/", (req, res) => {
+//   let absolutePath = __dirname + "/views/index.html"; 
+//     res.sendFile(absolutePath);  
+// });
 
 /** 5) serve JSON on a specific route */
 
-
+// app.get("/json", (req, res) => {
+//     res.send({"message": "Hello json"});   
+// });
 /** 6) Use the .env file to configure the app */
  
  
