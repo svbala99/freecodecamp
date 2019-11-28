@@ -68,9 +68,16 @@ app.get("/now", middleware, (req, res) => {
 });
 
 /** 9)  Get input from client - Route parameters */
+app.get("/:word/echo", (req, res) => {
+  res.send({echo: req.params.word});
+});
 
 /** 10) Get input from client - Query parameters */
 // /name?first=<firstname>&last=<lastname>
+app.get("/name?first=bala&last=murugan", (req, res) => {
+  let{first, last} = req.params;
+  res.send({ name: first+});
+});
 
 /** 11) Get ready for POST Requests - the `body-parser` */
 // place it before all the routes !
