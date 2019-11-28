@@ -36,11 +36,15 @@ var app = express();
 //     res.send({"message": "Hello json"});   
 // });
 /** 6) Use the .env file to configure the app */
- app.get("/json", (req, res) => {
-   if(process.env.MESSAGE_STYLE==='uppercase'){
-     res.send({"message": "HELLO JSON"});    
-   }
-});
+//  app.get("/json", (req, res) => {
+//    if(process.env.MESSAGE_STYLE==='uppercase'){
+//      let msg = "Hello json".toUpperCase();
+//      res.send({"message": msg});    
+//    }
+//    else{
+//      res.send({"message": "Hello json"}); 
+//    }
+// });
  
 /** 7) Root-level Middleware - A logger */
 //  place it before all the routes !
