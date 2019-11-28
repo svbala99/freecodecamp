@@ -17,8 +17,8 @@ if (!process.env.DISABLE_XORIGIN) {
          res.setHeader('Access-Control-Allow-Origin', origin);
          res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     }
-    next();
-  });
+    next(); 
+  }); 
 }
 
 var port = process.env.PORT || 3000;
