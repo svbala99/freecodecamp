@@ -1,5 +1,9 @@
 {
 	"name": "fcc-learn-npm-package-json",
+  "author": "Balamurugan V",
+  "description": "This includes boiler plate from freecodecamp on which I'm submitting the challenges.",
+  "keywords": [ "npm", "APIs", "glitch","freecodecamp"],
+  "license": "MIT",
 	"dependencies": {
 		"express": "^4.14.0"
 	},
