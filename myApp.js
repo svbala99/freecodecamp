@@ -12,8 +12,6 @@ let bodyParser = require("body-parser");
 //   next();
 // });
 
-
-
 const middleware = (req, res, next) => {
   req.time = new Date().toString();
   next();
@@ -76,31 +74,30 @@ app.get("/now", middleware, (req, res) => {
 
 /** 9)  Get input from client - Route parameters */
 app.get("/:word/echo", (req, res) => {
-  res.send({echo: req.params.word});
+  res.send({ echo: req.params.word });
 });
 
 /** 10) Get input from client - Query parameters */
 // /name?first=<firstname>&last=<lastname>
 app.get("/name", (req, res) => {
-  let{first, last} = req.query;
-  res.send({name: first+" "+last});
+  let { first, last } = req.query;
+  res.send({ name: first + " " + last });
 });
 
 /** 11) Get ready for POST Requests - the `body-parser` */
 // place it before all the routes !
 
-
 app.post("/", (req, res) => {
   let data = req.body;
-  res.send({body:data});
+  res.send({ body: data });
 });
 
 /** 12) Get data form POST  */
 app.post("/name", (req, res) => {
   let first = req.body.first;
-    let last = req.body.last;
+  let last = req.body.last;
 
-  res.send({name: first+" "+last});
+  res.send({ name: first + " " + last });
 });
 
 // This would be part of the basic setup of an Express app
